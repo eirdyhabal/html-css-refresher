@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <article class="tweet">
+        <div class="avatar"></div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <!--pretty much whenever we use the float property we have to clear the float
+        this can be fixed creating a blank div element with clear property with the value 
+        of "both", otherwise we run into weird layout issues. But there's a problem with 
+        this approach. This div is not descriptive or meaningful to search engines and 
+        readers because we purely added this div to solved a layout issue so our HTML 
+        markup is not semantic that is the problem in this approach.-->
+        <!--<div class="clear"></div>--> 
+
+        <!--There is another way of fixing this issue by using pseudo elements with 
+        ::before and ::after pseudo elements we can add content before or after the
+        content of an element. Before doing this let's comment out our div first.-->
+    </article>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/*Flexible Box Layout (FlexBox)
+-used for laying out elements in one direction.*/
+body {
+    margin: 10px;
+}
+.container {
+    border: 3px solid lightgrey;
+    /*we can choose flex on the "display" property*/
+    display: flex;
+    /*with flex you can use another property named "flex-direction" where
+    you can specify if you want your elements arrange in a row or a column*/
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /*default value is equal to "nowrap"*/
+    height: 90vh;
+}
+.box {
+    flex-basis: 5rem;
+    width: 5rem;
+    height: 5rem;
+    background: gold;
+    margin: 1rem;
+}
+.box-one {
+    align-self: flex-start;
+}
+
+/*Flexible Box Layout (FlexBox)
+  Is a Layout Method for laying out elements in one direction*/
+
+  /*FLEX common use cases:
+      -Navigation bars     */
+
+  /*ALIGNMENT in FLEX:
+    To align items you need to understand the concept
+    of AXES. There are 2 AXES in flex: Main(primary axes) and Cross(secondary axes).
+    This axes are dependant on the "flex-direction" property
+    if you set its value to "row" the Main: x-axis/horizontal-axis; Cross: y-axis/vertical-axis.
+    In contrast to this, when you set the value to "column" Main: y-axis/vertical-axis; Cross:
+    x-axis/horizontal-axis. Using this axis we can easily align items inside their container.
+    
+    Now to align items there is two properties we need to remember:
+    the "justify-content"(along the Main axis) and the "align-items"(along the Cross axis)
+    
+    The "justify-content" and "align-items" properties' default value is "flex-start"*/
+
+/* flex-basis (the initial size of a flex item) |
+   flex-grow (the growth factor)                | Item Properties
+   flex-shrink (the shrink factor)              |
+   flex (shorthand property which combines the 3 flex properties above.
+   Note that this properties should be applied on items and "NOT" on flex
+   containers.)                                 | */
+
+   /*NOTE: "flex-basis" property's default value is "auto" if you designate it with 
+   a numerical value(e.g. 10rem), it will translate and override your item's width/height 
+   property depending on your current AXES.*/

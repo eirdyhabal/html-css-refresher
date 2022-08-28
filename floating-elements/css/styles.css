@@ -1,0 +1,29 @@
+body {
+    margin: 10px;
+}
+.tweet {
+    border: 3px solid lightgrey;
+}
+.tweet::after {
+    /*So in here, we want to insert an element after the content of the tweet element
+    here we will set our content to just a pair of quote which means no-content. 
+    This element by default is an in-line element so we'll need to use the display 
+    property so we can convert this element into a block level element just like a div
+    then we'll set clear property to both. So by using this code we're essentially adding 
+    that <div> dynamically without polluting our markup with non-semantic element*/
+    content: '';
+    display: block;
+    clear: both;
+}
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    background-color: gold;
+    /*by default floated elements can't be seen by their parent element, they're 
+    invisible to them*/
+    float: left;
+    margin-right: 0.5rem;
+}
+.clear {
+    clear: both;
+}
